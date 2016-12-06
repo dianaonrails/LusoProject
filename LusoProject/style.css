@@ -1,0 +1,419 @@
+html,body{
+	font-family: 'Roboto Slab', sans-serif;
+}
+
+/************* MOBILE *****************/
+
+.navbar-mobile{
+	display: none;
+	background-color: #32312D;
+	padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+}
+
+.navbar-mobile__nav-toggle{
+	color: white;
+    cursor: pointer;
+    position: absolute;
+    height: 40px;
+    top: 20px;
+    right: 52px;
+}
+
+.navbar-mobile .navbar-mobile__hamburger, .navbar-mobile .navbar-mobile__hamburger:before, .navbar-mobile .navbar-mobile__hamburger:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 2px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: ''; 
+}
+
+.navbar-mobile .navbar-mobile__hamburger:before {
+  top: -8px; 
+}
+
+.navbar-mobile .navbar-mobile__hamburger:after {
+  bottom: -8px; }
+
+.navbar-mobile .navbar-mobile__hamburger, .navbar-mobile .navbar-mobile__hamburger:before, .navbar-mobile .navbar-mobile__hamburger:after {
+  transition: all 500ms ease-in-out; }
+
+.navbar-mobile.active .navbar-mobile__hamburger:before {
+    transform: rotate(45deg);
+}
+
+.navbar-mobile.active .navbar-mobile__hamburger:after {
+    transform: rotate(-45deg);
+}
+
+.navbar-mobile.active .navbar-mobile__hamburger:before, .navbar-mobile.active .navbar-mobile__hamburger:after {
+    top: 0;
+}
+
+.navbar-mobile.active .navbar-mobile__hamburger {
+    background-color: transparent;
+}
+
+.navbar-mobile__nav-toggle-title{
+	font-size: 0.8em;
+    position: absolute;
+    top: 30%;
+    text-decoration: none;
+    color: white;
+
+}
+
+.navbar-mobile__title{
+	text-align: center;
+    color: white;
+    font-size: 20px;
+    top: 10px;
+    width: 70%;
+    font-weight: 700;
+    position: relative;
+}
+
+.navbar-mobile__title a{
+	color:white;
+	text-decoration: none;
+}
+
+/************* DESKTOP *****************/
+
+.desktop-menu{
+	display: block;
+	z-index: 99999;
+	background-color: rgba(46,45,45,0.5);
+
+}
+
+.navbar{
+	width: 100%;
+	float: left;
+	z-index: 9999;
+}
+
+.navbar__brand{
+	width: 20%;
+	float: left;
+	display: inline-block;
+}
+
+.navbar__brand a{
+	color:white;
+	font-size: 36px;
+	font-weight: 600;
+	text-decoration: none;
+	font-family: 'Raleway';
+}
+
+.navbar__right{
+	width: 80%;
+	float: left;
+	display: inline-block;
+}
+
+.nav{
+	margin-top: 20px;
+	width: 550px;
+	float: right;
+}
+
+.nav__list-item{
+	display: inline-block;
+}
+
+.nav__list-item a{
+	color:white;
+	font-size: 15px;
+	text-decoration: none;
+	font-family: 'Roboto Slab';
+	margin-right: 20px;
+}
+
+.nav__list-item a:hover{
+	color:#CD9033;
+	cursor: pointer;
+}
+
+/***********BODY****************/
+
+.slider{
+	width: 100%;
+	position: relative;
+}
+
+.js-slider{
+	display: none;
+}
+
+.js-slider.active{
+	display: block;
+	width: 100%;
+
+	position: relative;
+    top: -57px;
+    z-index: -1;
+}
+
+.js-slider img{
+	width: 100%;
+	height: 90vh;
+}
+
+.slider__info{
+	padding:20px;
+	background-color: #CD9033;
+	color:white;
+	position: absolute;
+	width: 320px;
+	height: auto;
+	z-index: 11111;
+	bottom:80px;
+}
+
+.slider__info-title{
+	font-size: 30px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.background-img{
+	background-image: url('images/project1.jpg');
+	background-size: cover;
+	background-position: 100%;
+	width: 100%;
+	position: absolute;
+	top:0;
+	height: 100vh;
+	z-index: -1;
+}
+
+.image-arrow-left{
+	position: absolute;
+	top:30%;
+	left:0;
+	height: 70px;
+	width: 50px;
+	background-color: rgba(81,79,79,0.5);
+	cursor: pointer;
+}
+
+.image-arrow-right{
+	position: absolute;
+	top:30%;
+	right:0;
+	height: 70px;
+	width: 50px;
+	background-color: rgba(81,79,79,0.5);
+	cursor: pointer;
+}
+
+.icon__arrow{
+	font-size: 3em;
+	color:white;
+	position: relative;
+	top:10px;
+}
+
+.news-block{
+	position: relative;
+	    top: -64px;
+	height: 80px;
+	background-color: #2B2B2B;
+}
+
+.news-block__title{
+	width: 200px;
+	font-family: 'Roboto Slab';
+	color:white;
+	text-align: left;
+	display: inline-block;
+	margin-top: 20px;
+	font-size: 20px;
+	float: left;
+}
+
+.separation-line{
+	height: 40px;
+	width: 1px;
+	background-color: gray;
+	display: inline-block;
+	margin-top: 15px;
+	float: left;
+}
+
+.news-block__text{
+	font-family: 'Roboto Slab';
+	font-weight: 100;
+	color:white;
+	margin-top: 22px;
+	font-size: 15px;
+	display: inline-block;
+	margin-left: 10px;
+}
+.button__container{
+	display: inline-block;
+	float: right;
+	margin-top: 20px;
+}
+
+.button__container-center{
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.button{
+	border-radius: 20px;
+	background-color: #CD9033;
+	border-color:#CD9033;
+	color:white;
+	font-family: 'Roboto Slab';
+}
+
+.items{
+	position: relative;
+	margin-bottom: 100px;
+}
+
+.item__icon{
+	font-size: 3em;
+	text-align: center;
+}
+
+.items__title{
+	color:#CD9033;
+	text-align: center;
+	font-size:18px;
+}
+
+.items__text{
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: 100;
+	text-align: center;
+}
+
+.testimonials{
+	position: relative;
+
+	background-color: #333333;
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+
+.testimonials__text{
+
+	padding-bottom: 20px;
+	font-weight: 200;
+	text-align: center;
+	color:white;
+	font-size: 18px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.icon-left{
+	font-size: 1.5em;
+	position: absolute;
+	top:40%;
+	left: 20px;
+	cursor: pointer;
+}
+
+/***************ABOUT**************/
+.section-about{
+	margin-top: 40px;
+	margin-bottom: 80px;
+}
+
+h1{
+	font-size: 30px;
+	font-weight: 400;
+}
+
+p{
+	font-size: 14px;
+	font-weight: 300;
+}
+
+/************PORTFOLIO*************/
+
+.portfolio{
+	padding-top: 40px;
+	padding-bottom: 80px;
+	background-color: #F5F5F5;
+}
+
+
+.portfolio__item{
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+
+.portfolio__item-icon{
+	font-size: 10px;
+	color:gray;
+}
+
+
+/*************SERVICES************/
+.services{
+	padding-top: 40px;
+	padding-bottom: 80px;
+	background-color: #F5F5F5;
+}
+
+.services .services__item{
+	width: 200px;
+	height: 200px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 100px;
+	background-color: white;
+}
+
+.services__item-title{
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+    top: 30%;
+}
+
+/*********PROJECTS************/
+
+.projects{
+	padding-top: 40px;
+	padding-bottom: 80px;
+	background-color: #F5F5F5;
+}
+
+
+/*************FOOTER*************/
+
+.footer{
+	position: relative;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	background-color: rgba(226,218,205,0.5);
+}
+
+
+
+.footer__contact-title{
+	font-size: 12px;
+	color:gray;
+}
+
+.footer__contact-text{
+	font-size: 10px;
+	color:gray;
+}
