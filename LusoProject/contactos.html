@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<!-- Basic Page Needs
+  <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>LusoProject</title>
@@ -85,83 +85,35 @@
       </div>  
     </div>
   </header>
-  <div class="slider">
-    <div class="image-arrow-left">
-      <span class="icon-back icon__arrow"></span>
-    </div>
-    <div class="js-slider active">
-      <img class="slide__img" src="images/project1.jpg">
-      <div class="slider__info">
-        <div class="slider__info-title">VIVENDA ENCOSTA</div>
-        <div class="slider__info-link">ver projecto <span class="icon-right-arrow"></span></div>
-      </div>  
-    </div>  
-    <div class="js-slider">
-      <img class="slide__img" src="images/lastproj1.jpg">
-    </div> 
-    <div class="image-arrow-right">
-      <span class="icon-next icon__arrow"></span>
-    </div> 
-  </div>  
-   
-  <div class="news-block">
-    <div class="container">
-      <div class="news-block__title">Últimas Noticias</div>
-      <div class="separation-line"></div>
-      <div class="news-block__text">Quisque porta sit amet tellus nec porttitor.</div>
-      <div class="button__container"><div class="button">ver mais</div></div>
-    </div>  
-  </div> 
-  <div class="container items">
+  <div class="container">
     <div class="row">
-      <div class="four columns">
-        <div class="item__icon"><span class="icon-blueprint"></span></div>
-        <div class="items__title">Consultoria em Arquitetura</div>
-        <div class="items__text">Lorem ipsum dolor sit amet,consectetur adipiscing elit.  Curabitur facilisis tempor ex, et pharetra urna elementum nec.</div>
-        <div class="button__container-center"><div class="button">ver mais</div></div>
-      </div> 
-      <div class="four columns">
-        <div class="item__icon"><span class="icon-helmet"></span></div>
-        <div class="items__title">Fiscalização de Obras</div>
-        <div class="items__text">Lorem ipsum dolor sit amet,consectetur adipiscing elit.  Curabitur facilisis tempor ex, et pharetra urna elementum nec.</div>
-        <div class="button__container-center"><div class="button">ver mais</div></div>
+        <iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.951955856425!2d-8.630011484581354!3d41.157399679286044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc24b2eb7092e4cbe!2sNorteProject!5e0!3m2!1sen!2sus!4v1477600056450" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="row contacts">
+      <div class="contacts__msg">
+        Mande-nos a sua mensagem que nós entraremos em contacto:
       </div>  
-      <div class="four columns">
-        <div class="item__icon"><span class="icon-house"></span></div>
-        <div class="items__title">Revisão de Obras</div>
-        <div class="items__text">Lorem ipsum dolor sit amet,consectetur adipiscing elit.  Curabitur facilisis tempor ex, et pharetra urna elementum nec.</div>
-        <div class="button__container-center"><div class="button">ver mais</div></div>
-      </div>   
-    </div>  
-  </div> 
-  <div class="testimonials">
-    
-    <div class="container">
-      <div class="row">
-        <div class="testimonials__text">Nunca pensei que a minha moradia ficasse tão bonita, aliada ao seu baixo custo e com todas as funcionalidades que solicitámos, obrigado Arquitetos Associados.</div>
-        <div class="icon-circle-left icon-left js-left"></div>
-      </div>  
-    </div>  
-  </div>
-  <div class="row section">
-      <div class="section__title">
-        Testemunhos
-      </div>  
-      <div class="section__line"></div>
-      <div class="section__testimonials" id="testimonials">
-        <div class="icon-circle-left icon-left js-left"></div>
-        <div class="testimonial current">
-          &quot;As especialidades de Engenharia, foram efetuadas por especialistas, com bastante rigor e dentro do prazo acordado, vamos certamente desenvolver uma grande parceria com a Ergoproject. &quot;
-          <div class="testimonial-person">Miguel Macedo, Arquiteto</div>
+      <form class="contact-form" method="post" action="contact-handler.php">
+        <div class="six columns">
+          Primeiro e último nome:<br>
+          <input type="text" name="name" class="form-input js-contact"><br>
+          Telefone:<br>
+          <input type="tel" name="phone" class="form-input js-contact"><br>
+          Seu e-mail:<br>
+          <input type="email" name="email" class="form-input js-contact">
         </div>
-        <div class="testimonial">
-          &quot;“Quando iniciei o processo de construção da minha vivenda, estava bastante receosa, mas a equipa da Ergoproject efetuou um excelente trabalho de Fiscalização, não tive problemas até ao final. &quot;
-          <div class="testimonial-person">Lúcia Meneses, Advogada</div>
-        </div>
+        <div class="six columns">
+          
+          Escreva a sua mensagem:<br>
+          <textarea type="text" name="message" class="form-textarea js-contact"></textarea>
+          <input type="submit" class="button" value="Enviar">
+          
+        </div> 
+         
+      </form> 
         
-        <div class="icon-circle-right icon-right js-right"></div>
-      </div>
-    </div>    
+    </div>  
+  </div>  
 </body>
 <footer class="footer">
 
@@ -173,13 +125,12 @@
           <div class="footer__contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis erat eget lorem tincidunt gravida tristique eget ante. Ut dui velit, fermentum vitae aliquet sit amet, molestie eget metus.</div>
           
         </div>
-      </div> 
-
-      <div class="five columns" style="margin-left:100px;">
+      </div>
+      <div class="four columns">
         <div class="footer__contact-title">ENTRE EM CONTACTO</div>
         <div class="footer__contact-container">
           <div class="footer__contact">
-            <div class="icon-phone footer__contact-icon"></div>
+            <div class="icon-smartphone footer__contact-icon"></div>
             <div class="footer__contact-text">+351 912 189 151</div>
           </div>  
         
@@ -189,18 +140,14 @@
           </div> 
         
           <div class="footer__contact">
-            <div class="icon-mail2 footer__contact-icon"></div>
+            <div class="icon-email footer__contact-icon"></div>
             <div class="footer__contact-text">geral@arquiteturas.pt</div>
           </div> 
         </div>
       </div>  
-      <div class="two columns">
-        <div class="footer__icon icon-facebook2"></div>
-        <div class="footer__icon icon-linkedin"></div>
-        <div class="footer__icon icon-twitter"></div>
-      </div>  
+
   </div> 
   
   
 </footer>
-</html>
+</html>    
