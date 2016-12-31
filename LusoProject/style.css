@@ -429,6 +429,7 @@ html,body{
 	margin: 0 auto;
 }
 
+
 .icon-left{
 	font-size: 1.5em;
 	position: absolute;
@@ -436,6 +437,86 @@ html,body{
 	left: 20px;
 	cursor: pointer;
 }
+
+
+/***********TESTIMONIALS**********/
+
+.circles{
+	position: relative;
+	top:40px;
+	width: 8%;
+	margin:0 auto;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 10px;
+    height: 10px;
+    background-color: gray;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+	/* width and height can be anything, as long as they're equal */
+}
+
+.circle:last-child{
+	margin-right: 0;
+}
+
+.circle.active{
+	background-color:white;
+}
+
+.section-testimonials{
+	margin-top: 50px;
+	background-color: #333333;
+	
+	height: 300px;
+	width: 100%;
+	position: relative;
+}
+
+.section-testimonials__background{
+	position: absolute;
+	top:0;
+	height: 300px;
+	width: 100%;
+}
+
+.section-testimonials .section-testimonials__title{
+	text-align: center;
+	color:#CD9033;
+	font-weight: 700;
+	font-size: 25px;
+	margin-bottom: 40px;
+	padding-top: 35px;
+	letter-spacing: 3px;
+}
+
+.section-testimonials .section-testimonials__text{
+	display: none;
+	text-align: center;
+	position: relative;
+	font-weight: 300;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	color:white;
+	line-height: 1.2;
+}
+
+.section-testimonials__text.current{
+	display: block;
+}
+
+.section-testimonials .section-testimonials__person{
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	font-style: normal;
+	margin-top: 20px;
+	font-family: 'Open Sans';
+}
+
 
 /***************ABOUT**************/
 .section-about{

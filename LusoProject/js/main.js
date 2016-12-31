@@ -48,6 +48,30 @@ $(document).ready(function() {
   
     old.removeClass('current');
   });
+
+  $('.js-testimonial').click(function(){
+     
+     $('.circle').removeClass('active');
+     $('.section-testimonials__text').removeClass('current');
+
+     $(this).addClass('active');
+     var id = $(this).attr('id');
+
+     switch(id){
+      case 'first':
+        $('.section-testimonials__text:first').addClass('current');
+        break;
+      case 'second':
+        $('.section-testimonials__text:nth-child(3)').addClass('current');
+        break; 
+      case 'third':
+        $('.section-testimonials__text:nth-child(4)').addClass('current');
+        break;    
+      default:
+        break;  
+     }
+    
+  });
  
 
   $('.js-left').click(function(){
