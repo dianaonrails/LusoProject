@@ -20,7 +20,11 @@ function validateEmail(email) {
     return re.test(email);
 }  
 
+
+
 $(document).ready(function() {
+
+
   
   $('.js-menu').click(function(e){
 

@@ -2,6 +2,11 @@ html,body{
 	font-family: 'Roboto Slab', sans-serif;
 }
 
+
+
+
+
+
 /************* MOBILE *****************/
 .navbar-mobile{
 	display: none;
@@ -88,6 +93,7 @@ html,body{
 .desktop-menu{
 	display: block;
 	z-index: 99999;
+	position: relative;
 	background-color: rgba(46,45,45,0.5);
 
 }
@@ -141,32 +147,134 @@ html,body{
 	cursor: pointer;
 }
 
-/***********BODY****************/
+/***********CAROUSEL**************/
 
-.slider{
-	width: 100%;
-	position: relative;
+
+.carousel {
+    position: relative;
+    top: -57px;
 }
 
-.js-slider{
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.carousel input[type="radio"]{
 	display: none;
 }
 
-.js-slider.active{
-	display: block;
-	width: 100%;
-
-	position: relative;
-    top: -57px;
-    z-index: -1;
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
 }
 
-.js-slider img{
-	width: 100%;
-	height: 90vh;
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
 }
 
-.slider__info{
+.carousel-item img {
+    display: block;
+    height: 90vh;
+    width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+
+/***********BODY****************/
+
+
+
+.carousel__info{
 	padding:20px;
 	background-color: #CD9033;
 	color:white;
@@ -177,10 +285,21 @@ html,body{
 	bottom:80px;
 }
 
-.slider__info-title{
+.carousel__info-title{
 	font-size: 30px;
 	margin-bottom: 20px;
 	text-align: left;
+}
+
+.carousel__info-link{
+	color:white;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.carousel__info-link:hover{
+	color:black;
+
 }
 
 .background-img{
@@ -194,25 +313,6 @@ html,body{
 	z-index: -1;
 }
 
-.image-arrow-left{
-	position: absolute;
-	top:30%;
-	left:0;
-	height: 70px;
-	width: 50px;
-	background-color: rgba(81,79,79,0.5);
-	cursor: pointer;
-}
-
-.image-arrow-right{
-	position: absolute;
-	top:30%;
-	right:0;
-	height: 70px;
-	width: 50px;
-	background-color: rgba(81,79,79,0.5);
-	cursor: pointer;
-}
 
 .icon__arrow{
 	font-size: 3em;
@@ -275,6 +375,16 @@ html,body{
 	border-color:#CD9033;
 	color:white;
 	font-family: 'Roboto Slab';
+}
+
+.button a{
+	color:white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.button a:hover{
+	color:#333333;
 }
 
 .items{
@@ -417,6 +527,14 @@ p{
 .projects__link{
 	margin-top: 10px;
 	color:#CD9033;
+	width: 100%;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.projects__link:hover{
+	color:#333;
 }
 
 .projects__item .projects__image{
@@ -476,6 +594,43 @@ p{
 .googlemaps{
 	width: 100%;
 	height: 350px;
+}
+
+
+/**************PROJECT**************/
+
+.project{
+background-color: #f3f3f3;
+
+}
+
+
+.project__container{
+}
+
+.project__left{
+	padding-top: 50px;
+	padding-right: 20px;
+	
+}
+
+.project__left .project__title{
+	color:#535353;
+	font-weight: 700;
+}
+
+.project__text{
+	margin-top: 40px;
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.project__right{
+	margin: 0;
+}
+
+.project__right img{
+	width: 100%;
 }
 
 
