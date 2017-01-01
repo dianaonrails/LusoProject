@@ -3,11 +3,8 @@ html,body{
 }
 
 
-
-
-
-
 /************* MOBILE *****************/
+
 .navbar-mobile{
 	display: none;
 	background-color: #32312D;
@@ -74,7 +71,7 @@ html,body{
 }
 
 .navbar-mobile__title{
-	text-align: center;
+	text-align: left;
     color: white;
     font-size: 20px;
     top: 10px;
@@ -87,6 +84,45 @@ html,body{
 	color:white;
 	text-decoration: none;
 }
+
+
+.navbar-mobile__search{
+	display: inline-block;
+    width: 15%;
+    color: white;
+    position: absolute;
+    top: 15px;
+    font-size: 20px;
+    right: 2%;
+}
+.navbar-mobile.active .list{
+	display: block;
+}
+
+.navbar-mobile .list{
+	list-style: none;
+	margin-top: 40px;
+	padding-left: 30px;
+}
+
+.navbar-mobile .list.list-closed{
+	display: none;
+}
+
+.navbar-mobile .list-item a{
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+}
+
+.navbar-mobile .list-item a:hover{
+	color:#E8D482;
+}
+
+.closed{
+	display: none;
+}
+
 
 /************* DESKTOP *****************/
 
@@ -761,4 +797,81 @@ background-color: #f3f3f3;
 	display: inline-block;
 	margin-right: 15px;
 	font-size: 20px;
+}
+
+
+.footer .middle-column{
+	margin-left:100px;
+}
+
+/********** RESPONSIVE TO MOBILE *************/
+@media (max-width: 991px) {
+	.desktop-menu{
+		display: none;
+	}
+
+	.navbar-mobile{
+		display: block;
+	}
+
+	.navbar-mobile{
+		position: relative;
+		display: block;
+		z-index: 999999;
+	}
+
+	.navbar-mobile .list-item{
+		margin-bottom: 2em;
+		text-align: left;
+	}
+
+	.news-block__title{
+		width: 100%;
+	}
+
+	.separation-line{
+		display: none;
+	}
+
+	.news-block{
+		top: -60px;
+    	height: 180px;
+	}
+
+	.button__container{
+		width: 100%;
+		float: left;
+	}
+
+	.section-testimonials{
+		height: 400px;
+	}
+
+	.carousel__info{
+		bottom:58px;
+	}
+
+	.circles{
+		width: 18%;
+	}
+
+	.projects__item{
+		margin-bottom: 20px;
+	}
+
+	.projects__item .projects__item-description{
+		padding: 5px;
+	}
+
+	.project__text{
+		margin-bottom: 20px;
+	}
+
+	.footer .middle-column{
+		margin-left: 0;
+	}
+
+	.footer__contact-container{
+		margin-bottom: 40px;
+	}
 }
